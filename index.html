@@ -1,445 +1,292 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
-    <script src="js/swiper-bundle.min.js"></script>
-
-    <link rel="stylesheet" href="css/main.css">
-    <script src="js/common.js"></script>
-    <script src="js/main.js"></script>
-    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
-    <title>부산현대미술관</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Web Designer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;400;500;700;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="">
-            <h1 class="logo">
-                <a href="index.html"><span class="blind">부산현대미술관</span></a>
-            </h1>
-            <nav class="gnb">
-                <button class="gnb_open">
-                    <span class="blind">메뉴열기</span>
-                    <i class="menu_open"><span class="blind">아이콘</span></i>
-                </button>
-                <div class="gnb_wrap">
-                    <div class="gnb_logo"><a href="index.html"><span class="blind">부산현대미술관</span></a></div>
-                    <ul class="depth1">
-                        <li>
-                            <a href="#n"><span>미술관 소개</span></a>
-                            <ul class="depth2">
-                                <li><a href="#n">인사말 및 연혁</a></li>
-                                <li><a href="#n">관련법령</a></li>
-                                <li><a href="#n">오시는길</a></li>
-                                <li><a href="#n">관람안내</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#n"><span>전시</span></a>
-                            <ul class="depth2">
-                                <li><a href="#n">현재전시</a></li>
-                                <li><a href="#n">예정전시</a></li>
-                                <li><a href="#n">지난전시</a></li>
-                                <li><a href="#n">온라인 미술관</a></li>
-                                <li><a href="#n">무장애 미술관</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#n"><span>교육 및 문화</span></a>
-                            <ul class="depth2">
-                                <li><a href="#n">교육</a></li>
-                                <li><a href="#n">문화행사</a></li>
-                                <li><a href="#n">도슨트</a></li>
-                                <li><a href="#n">책그림섬</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#n"><span>소식참여</span></a>
-                            <ul class="depth2">
-                                <li><a href="#n">공지사항</a></li>
-                                <li><a href="#n">보도자료</a></li>
-                                <li><a href="#n">온라인예약</a></li>
-                                <li><a href="#n"> 대관안내</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#n"><span>소장품</span></a>
-                            <ul class="depth2">
-                                <li><a href="#n">소장품보기</a></li>
-                                <li><a href="#n">모카이브</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <div class="gnb_util">
-                        <div class="gnb_lang">
-                            <button class="gnb_lang_open">
-                                <i class="gnb_icon_lang"></i>
-                                <span class="blind">언어 선택 열기</span>
-                            </button>
-                        </div><!--lang-->
-                    </div><!--gnb_util-->
-                    <button class="gnb_close">
-                        <span class="blind">메뉴 닫기</span>
-                        <i class="menu_close"><span class="blind">아이콘</span></i>
-                    </button>
-                </div><!--gnb_wrap-->
-                <div class="gnb_bg"></div><!--메뉴 배경-->  
-            </nav>
-            <div class="util">
-                <div class="lang">
-                    <button class="lang_open">
-                        <i class="icon_lang"></i>
-                        <span class="blind">언어 선택 열기</span>
-                    </button>
-                </div><!--lang-->
-            </div><!--util-->
-    </header>
-    <section class="visual">
-            <h2 class="blind">팝업</h2>
-            <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
-                <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
-                    <li class="swiper-slide">
-                        <div class="photo">
-                            <img class="pc" src="images/main/visual_01.jpg" alt="">
-                            <img class="mo" src="images/main/mo_visual_01.jpg" alt="">
-                        </div>
-                    </li>
-                    <li class="swiper-slide">
-                        <div class="photo">
-                            <img class="pc" src="images/main/visual_02.jpg" alt="">
-                            <img class="mo" src="images/main/mo_visual_02.jpg" alt="">
-                        </div>
-                    </li>
-                    <li class="swiper-slide">
-                        <div class="photo">
-                            <img class="pc" src="images/main/visual_03.jpg" alt="">
-                            <img class="mo" src="images/main/mo_visual_03.jpg" alt="">
-                        </div>
-                    </li>
-                    <li class="swiper-slide">
-                        <div class="photo">
-                            <img class="pc" src="images/main/visual_04.jpg" alt="">
-                            <img class="mo" src="images/main/mo_visual_04.jpg" alt="">
-                        </div>
-                    </li>
-                </ul>
-            </div><!--swiper-->
-            <div class="paging">
-                <ul>
-                    <!-- <li><span>문구</span></li> -->
-                </ul>
-            </div><!--paging-->
-    </section>
-    <section class="showing">
-        <div class="show_wrap">
-            <div class="tit">
-                <h2>전시</h2>
-            </div><!--tit-->
-            <div class="list">
-                <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
-                    <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
-                        <li class="swiper-slide">
-                            <a href="#n">
-                                <div class="photo"><img src="images/main/showing_01.jpg" alt=""></div>
-                                <h3>소장품섬_문소현: 공원 생활</h3>
-                                <p>-기간:2025. 11. 8.(토) ~ 2026. 2. 18.(수)</p>
-                            </a>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="#n">
-                                <div class="photo"><img src="images/main/showing_02.jpg" alt=""></div>
-                                <h3>2025 부산현대미술관 시네미디어_영화 이후</h3>
-                                <p>-기간:2025. 9. 13.(토) ~ 2026. 2. 18.(수)</p>
-                            </a>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="#n">
-                                <div class="photo"><img src="images/main/showing_03.jpg" alt=""></div>
-                                <h3>Re: 새-새-의자</h3>
-                                <p>-기간:2024. 3. 15.(금) ~ 상설</p>
-                            </a>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="#n">
-                                <div class="photo"><img src="images/main/showing_04.jpg" alt=""></div>
-                                <h3>패트릭 블랑: 수직정원</h3>
-                                <p>-기간:2018. 6. 16.(토) ~ 상설</p>
-                            </a>
-                        </li>
-                    </ul>
-                </div><!--swiper-->
-            </div><!--list-->
-            <div class="more">
-                <a href="#n">
-                    <span>전체보기</span>
-                </a>
+
+  <div id="cur"></div>
+
+  <!-- ══════════════════════════════════
+       NAV
+  ══════════════════════════════════ -->
+  <nav>
+    <a href="#hero" class="nav-logo">PORT<span>.</span>FOLIO</a>
+    <ul class="nav-links">
+      <li><a href="#about">소개</a></li>
+      <li><a href="#projects">프로젝트</a></li>
+      <li><a href="#contact">연락처</a></li>
+    </ul>
+    <div class="nav-badge">OPEN TO WORK</div>
+  </nav>
+
+  <!-- ══════════════════════════════════
+       HERO
+  ══════════════════════════════════ -->
+  <section id="hero">
+
+    <!-- yellow background block (top-right) -->
+    <div class="hero-bg-block"></div>
+
+    <!-- small accent squares -->
+    <div class="y-sq y-sq-1"></div>
+    <div class="y-sq y-sq-2"></div>
+
+    <!-- main text -->
+    <div class="hero-content">
+      <div class="hero-tag">Web Designer · 신입 디자이너</div>
+      <div class="hero-name">김유진</div>
+      <div class="hero-role-row">
+        <div class="hero-role">Web Designer</div>
+        <div class="hero-role-line"></div>
+      </div>
+    </div>
+
+    <!-- bottom info bar -->
+    <div class="hero-bottom">
+      <div class="hero-desc-cell">
+        <p>
+          사용자가 머무르고 싶은 웹을 만듭니다.<br>
+          시각적 완성도와 사용성을 동시에 추구하는<br>
+          신입 웹 디자이너입니다.
+        </p>
+      </div>
+      <div class="hero-btns-cell">
+        <a href="#projects" class="btn-primary">프로젝트 보기</a>
+        <a href="#contact" class="btn-secondary">연락하기</a>
+      </div>
+      <div class="hero-scroll-cell">
+        <span class="scroll-line"></span>
+        SCROLL DOWN
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════
+       ABOUT
+  ══════════════════════════════════ -->
+  <section id="about">
+    <div class="sec-wrap">
+      <div class="about-bg-y"></div>
+
+      <div class="section-header reveal">
+        <div>
+          <div class="section-num">01 — ABOUT ME</div>
+          <h2 class="section-title">나는 <span class="hl">누구</span>인가</h2>
+        </div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            안녕하세요! 저는 <strong>웹 디자인과 사용자 경험</strong>에 관심이 많은
+            신입 디자이너입니다.
+          </p>
+          <p>
+            대학에서 시각디자인을 전공하며 타이포그래피, 컬러 이론, UI/UX의 기초를
+            탄탄히 다졌고, 개인 프로젝트를 통해 실제 웹사이트를 직접 기획·디자인·제작하는
+            경험을 쌓았습니다.
+          </p>
+          <p>
+            아름다운 것에 그치지 않고 <strong>논리적으로 설계된 레이아웃과 직관적인
+            인터랙션</strong>이 좋은 웹을 만든다고 믿습니다.
+          </p>
+
+          <div class="about-tools-title">// 사용 툴</div>
+          <div class="tools-grid">
+            <div class="tool-item">Figma</div>
+            <div class="tool-item">Photoshop</div>
+            <div class="tool-item">Illustrator</div>
+            <div class="tool-item">After Effects</div>
+            <div class="tool-item">HTML/CSS</div>
+            <div class="tool-item">Framer</div>
+            <div class="tool-item">Notion</div>
+            <div class="tool-item">Zeplin</div>
+          </div>
+        </div>
+
+        <div class="reveal d2">
+          <ul class="about-keyword-list">
+            <li>Visual Design   <span class="sub">시각 디자인</span></li>
+            <li>UX Research     <span class="sub">사용자 리서치</span></li>
+            <li>Prototyping     <span class="sub">프로토타이핑</span></li>
+            <li>Typography      <span class="sub">타이포그래피</span></li>
+            <li>Motion          <span class="sub">모션 디자인</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       PROJECTS
+  ══════════════════════════════════ -->
+  <section id="projects">
+    <div class="sec-wrap">
+      <div class="section-header reveal">
+        <div>
+          <div class="section-num">02 — PROJECTS</div>
+          <h2 class="section-title">작업 <span class="hl">목록</span></h2>
+        </div>
+      </div>
+
+      <div class="projects-list">
+
+        <!-- Project 01 -->
+        <div class="project-item reveal">
+          <div class="project-screenshot">
+            <!--
+              실제 스크린샷 교체 방법:
+              <img src="images/project1.png" alt="Bloom 스크린샷">
+              으로 아래 div 전체를 교체하세요.
+            -->
+            <div class="screenshot-placeholder">
+              <div class="icon">🌿</div>
+              <div class="hint">홈페이지 스크린샷으로<br>교체하세요</div>
             </div>
-        </div><!--show_wrap-->
-    </section>
-    <section class="midcont">
-        <div class="wrapper">
-            <div class="event">
-                <div class="tit">
-                    <h2><span>행사</span></h2>
-                </div><!--tit-->
-                <div class="list">
-                    <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
-                        <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
-                            <li class="swiper-slide">
-                                <a href="#n">
-                                    <div class="photo"><img src="images/main/event_01.jpg" alt=""></div>
-                                    <h3>2025 청소년 진로 탐색 프로그램 〈부산모카 반짝〉</h3>
-                                    <p>-기간:2025. 10. 14.(화) ~ 2025. 11. 21.(금)</p>
-                                </a>
-                            </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
-                            <li class="swiper-slide">
-                                <a href="#n">
-                                    <div class="photo"><img src="images/main/event_02.jpg" alt=""></div>
-                                    <h3>2025 부산현대미술관 하반기 꼼지락 〈씨앗을 톡톡, 쑥쑥 – 가을바람편〉</h3>
-                                    <p>-기간:2025. 10. 18.(토) ~ 2025. 10. 26.(일)</p>
-                                </a>
-                            </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
-                            <li class="swiper-slide">
-                                <a href="#n">
-                                    <div class="photo"><img src="images/main/event_03.jpg" alt=""></div>
-                                    <h3>“함께, 미술관” 어린이 가족 대상 전시 설명 프로그램 - 《힐마 아프 클린트: 적절한 소환》</h3>
-                                    <p>-기간:2025. 10. 18.(토) ~ 2025. 10. 25.(일)</p>
-                                </a>
-                            </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
-                            <li class="swiper-slide">
-                                <a href="#n">
-                                    <div class="photo"><img src="images/main/event_04.jpg" alt=""></div>
-                                    <h3>2025 부산현대미술관 가을 워크숍 〈그린 랩: 작은 잎, 섬세한 시선〉</h3>
-                                    <p>-기간:2025. 10. 3.(금) ~ 2025. 10. 4.(토)</p>
-                                </a>
-                            </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
-                            <li class="swiper-slide">
-                                <a href="#n">
-                                    <div class="photo"><img src="images/main/event_05.jpg" alt=""></div>
-                                    <h3>“함께, 미술관” 어린이 가족 대상 전시 설명 프로그램 - 《힐마 아프 클린트: 적절한 소환》</h3>
-                                    <p>-기간:2025.9.20.(토) ~ 2025.9.27.(토)</p>
-                                </a>
-                            </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
-                        </ul>
-                    </div>
-                </div><!--list-->
-                <div class="more">
-                    <a href="#n"><span class="blind">전체보기</span></a>
-                </div><!--more-->
+          </div>
+          <div class="project-info">
+            <div class="y-corner"></div>
+            <div class="project-num">PROJECT 01</div>
+            <div class="project-name">Bloom — 식물 쇼핑몰</div>
+            <div class="project-type">반응형 웹사이트</div>
+            <p class="project-desc">
+              반려식물을 판매하는 온라인 쇼핑몰 웹사이트입니다. 자연스럽고 따뜻한
+              톤앤매너를 적용하고, 상품 탐색부터 구매까지의 사용자 흐름을
+              최적화하는 데 집중했습니다. 모바일 퍼스트 접근법으로 설계했습니다.
+            </p>
+            <div class="project-tags">
+              <span class="p-tag">UI Design</span>
+              <span class="p-tag">반응형</span>
+              <span class="p-tag">Figma</span>
             </div>
-            <div class="notice">
-                <div class="tit">
-                    <h2><span>공지</span></h2>
-                </div><!--tit-->
-                <div class="list">
-                    <ul>
-                        <li>
-                            <a href="#n">
-                                <h3>부산현대미술관 기간제근로자(공무직 대체인력) 채용 공고</h3>
-                                <p>2025-11-05</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#n">
-                                <h3>『월간미술대상』 특별부문 〈2025 관람객이 선정한 화제의 전시〉 투표 참여 안내(-2025. 11.16.)</h3>
-                                <p>2025-10-30</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#n">
-                                <h3>부산현대미술관 월별 일정표(2025.11)</h3>
-                                <p>2025-10-28</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#n">
-                                <h3>부산현대미술관 전시 해설 도슨트 운영일정 안내(2025. 10. 1. - 10. 31.)</h3>
-                                <p>2025-10-28</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#n">
-                                <h3>《힐마 아프 클린트: 적절한 소환》 전시 도록 품절 안내</h3>
-                                <p>2025-10-18</p>
-                            </a>
-                        </li>
-                    </ul>
-                </div><!--list-->
-                <div class="more">
-                    <a href="#n"><span class="blind">더보기</span></a>
-                </div><!--more-->
+          </div>
+        </div>
+
+        <!-- Project 02 -->
+        <div class="project-item reveal">
+          <div class="project-screenshot">
+            <div class="screenshot-placeholder">
+              <div class="icon">💼</div>
+              <div class="hint">홈페이지 스크린샷으로<br>교체하세요</div>
             </div>
-        </div><!--wrapper-->
-    </section>
-    <section class="collection">
-        <div class="collec_wrap">
-            <div class="tit">
-                <h2>소장품</h2>
-            </div><!--tit-->
-            <div class="list">
-                <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
-                    <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
-                        <li class="swiper-slide">
-                            <a href="#n">
-                                <div class="photo">
-                                    <img src="images/main/collect_01.jpg" alt="">
-                                </div><!--photo-->
-                            </a>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="#n">
-                                <div class="photo">
-                                    <img src="images/main/collect_02.jpg" alt="">
-                                </div><!--photo-->
-                            </a>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="#n">
-                                <div class="photo">
-                                    <img src="images/main/collect_03.jpg" alt="">
-                                </div><!--photo-->
-                            </a>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="#n">
-                                <div class="photo">
-                                    <img src="images/main/collect_04.jpg" alt="">
-                                </div><!--photo-->
-                            </a>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="#n">
-                                <div class="photo">
-                                    <img src="images/main/collect_05.jpg" alt="">
-                                </div><!--photo-->
-                            </a>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="#n">
-                                <div class="photo">
-                                    <img src="images/main/collect_06.jpg" alt="">
-                                </div><!--photo-->
-                            </a>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="#n">
-                                <div class="photo">
-                                    <img src="images/main/collect_07.jpg" alt="">
-                                </div><!--photo-->
-                            </a>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="#n">
-                                <div class="photo">
-                                    <img src="images/main/collect_08.jpg" alt="">
-                                </div><!--photo-->
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div><!--list-->
-            <div class="ctrl_btn">
-                <button class="prev">
-                    <span class="blind">이전팝업</span>
-                    <i>
-                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M2.873 8.25L8.56925 13.9462L7.5 15L0 7.5L7.5 0L8.56925 1.05375L2.873 6.75H15V8.25H2.873Z" fill="#333333"/>
-                        </svg>
-                    </i>
-                </button>
-                <div class="paging"></div>
-                <button class="next">
-                    <span class="blind">다음팝업</span>
-                    <i>
-                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.127 8.25L6.43075 13.9462L7.5 15L15 7.5L7.5 0L6.43075 1.05375L12.127 6.75H0V8.25H12.127Z" fill="#333333"/>
-                        </svg>
-                    </i>
-                </button>
-            </div><!--ctrl_btn-->
-            <div class="more"><a href="#n"><span>전체보기</span></a></div><!--more-->
-        </div><!--collec_wrap-->
-    </section>
-    <section class="service">
-        <div class="wrapper">
-            <div class="tit">
-                <h2><span class="blind">서비스 바로가기</span></h2>
-            </div><!--tit-->
-            <div class="list">
-                <ul>
-                    <li>
-                        <a href="#n">
-                            <span>오시는 길</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#n">
-                            <span>대관 안내</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#n">
-                            <span>온라인 예약</span>
-                        </a>
-                    </li>
-                </ul>
-            </div><!--list-->
-        </div><!--wrapper-->
-    </section>
-    <footer>
-        <div class="wrapper">
-            <button class="top"><span class="blind">위로가기</span></button>
-            <div class="f_logo"><img src="images/common/f_logo.svg" alt=""></div>
-            <div class="f_info">
-                <div class="f_inner">
-                    <address>(49300) 부산광역시 사하구 낙동남로 1191 (하단동)부산현대미술관</address>
-                    <span>대표전화. 051-220-7400</span>
-                    <span>전자우편. moca@korea.kr</span>
-                    <div class="copyright">
-                        <span>홈페이지의 모든 내용들은 무단 복제가 불가합니다. 
-                            <a href="#n">개인정보처리방침</a> <br>
-                            ⓒ Busan Museum of Contemporary Art All <br> 
-                            rights reserved.<a href="#n">Privacy Policy</a></span>
-                    </div><!--copyright-->
-                </div><!--f_inner-->
-                <div class="f_sns">
-                    <ul>
-                        <li class="instar">
-                            <a href="#n">
-                                <span class="blind">인스타그램</span>
-                            </a>
-                        </li>
-                        <li class="facebook">
-                            <a href="#n">
-                                <span class="blind">페이스북</span>
-                            </a>
-                        </li>
-                        <li class="youtube">
-                            <a href="#n">
-                                <span class="blind">유튜브</span>
-                            </a>
-                        </li>
-                        <li class="blog">
-                            <a href="#n">
-                                <span class="blind">블로그</span>
-                            </a>
-                        </li>
-                        <li class="kakao">
-                            <a href="#n">
-                                <span class="blind">카카오톡</span>
-                            </a>
-                        </li>
-                        <li class="twiter">
-                            <a href="#n">
-                                <span class="blind">트위터</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div><!--f_sns-->
-            </div><!--f_info-->
-        </div><!--wrapper-->
-        <div class="f_roll"><span>Busan Museum of Contemporary Art. Busan Museum of Contemporary Art. Busan Museum of Contemporary Art.</span></div><!--f_roll-->
-    </footer>
+          </div>
+          <div class="project-info">
+            <div class="y-corner"></div>
+            <div class="project-num">PROJECT 02</div>
+            <div class="project-name">Studio GRAY — 브랜드 사이트</div>
+            <div class="project-type">브랜드 웹사이트</div>
+            <p class="project-desc">
+              소규모 인테리어 스튜디오의 브랜드 사이트입니다. 포트폴리오 갤러리와
+              프로세스 소개 페이지를 중심으로 구성했으며, 스크롤 인터랙션과
+              이미지 전환 애니메이션을 통해 공간감을 표현했습니다.
+            </p>
+            <div class="project-tags">
+              <span class="p-tag">Brand Site</span>
+              <span class="p-tag">Motion</span>
+              <span class="p-tag">HTML/CSS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 03 -->
+        <div class="project-item reveal">
+          <div class="project-screenshot">
+            <div class="screenshot-placeholder">
+              <div class="icon">📱</div>
+              <div class="hint">홈페이지 스크린샷으로<br>교체하세요</div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="y-corner"></div>
+            <div class="project-num">PROJECT 03</div>
+            <div class="project-name">Noti — 앱 랜딩페이지</div>
+            <div class="project-type">랜딩페이지</div>
+            <p class="project-desc">
+              할 일 관리 앱의 출시 전 랜딩페이지입니다. 핵심 기능을 시각적으로
+              풀어내고 이메일 사전 등록 전환율을 높이기 위해 CTA 구성과 섹션 순서를
+              사용자 관점에서 설계했습니다.
+            </p>
+            <div class="project-tags">
+              <span class="p-tag">Landing Page</span>
+              <span class="p-tag">Conversion</span>
+              <span class="p-tag">Framer</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       CONTACT
+  ══════════════════════════════════ -->
+  <section id="contact">
+    <div class="sec-wrap">
+      <div class="contact-inner">
+
+        <div class="contact-left">
+          <div class="section-header reveal">
+            <div>
+              <div class="section-num">03 — CONTACT</div>
+              <h2 class="section-title">함께<br><span class="hl">일해요</span></h2>
+            </div>
+          </div>
+          <p class="contact-desc reveal">
+            인턴십, 신입 포지션, 프리랜서 협업 등<br>
+            어떤 기회든 편하게 연락 주세요.
+          </p>
+          <a href="mailto:hello@yujin.kr" class="contact-email-link reveal">
+            hello@yujin.kr →
+          </a>
+          <div class="social-row reveal d1">
+            <a href="#" class="soc">be</a>
+            <a href="#" class="soc">gh</a>
+            <a href="#" class="soc">ig</a>
+            <a href="#" class="soc">in</a>
+          </div>
+        </div>
+
+        <div class="contact-right reveal d2">
+          <div class="contact-box">
+            <div class="cbox-label">// INFO</div>
+            <div class="cbox-item">
+              <div class="cbox-icon">📍</div>
+              <div class="cbox-text"><strong>위치</strong> — 서울, 대한민국</div>
+            </div>
+            <div class="cbox-item">
+              <div class="cbox-icon">🎓</div>
+              <div class="cbox-text"><strong>학력</strong> — 시각디자인학과 졸업 (2024)</div>
+            </div>
+            <div class="cbox-item">
+              <div class="cbox-icon">✦</div>
+              <div class="cbox-text"><strong>상태</strong> — 구직 중 · 즉시 합류 가능</div>
+            </div>
+            <div class="cbox-item">
+              <div class="cbox-icon">💬</div>
+              <div class="cbox-text"><strong>언어</strong> — 한국어 (원어민) · 영어 (비즈니스)</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       FOOTER
+  ══════════════════════════════════ -->
+  <footer>
+    <span><span class="yl">©</span> 2024 김유진</span>
+    <span>WEB DESIGNER · SEOUL</span>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
