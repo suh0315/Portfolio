@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio — Web Designer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;400;500;700;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -28,31 +28,24 @@
        HERO
   ══════════════════════════════════ -->
   <section id="hero">
-
-    <!-- yellow background block (top-right) -->
     <div class="hero-bg-block"></div>
-
-    <!-- small accent squares -->
     <div class="y-sq y-sq-1"></div>
     <div class="y-sq y-sq-2"></div>
 
-    <!-- main text -->
     <div class="hero-content">
       <div class="hero-tag">Web Designer · 신입 디자이너</div>
-      <div class="hero-name">김유진</div>
+      <div class="hero-name">이수형</div>
       <div class="hero-role-row">
         <div class="hero-role">Web Designer</div>
         <div class="hero-role-line"></div>
       </div>
     </div>
 
-    <!-- bottom info bar -->
     <div class="hero-bottom">
       <div class="hero-desc-cell">
         <p>
-          사용자가 머무르고 싶은 웹을 만듭니다.<br>
-          시각적 완성도와 사용성을 동시에 추구하는<br>
-          신입 웹 디자이너입니다.
+          사용자의 입장에서 생각하고 더 편리한 웹 경험을 만들기 위해<br>
+          끊임없이 배우고 성장하는 신입 웹 디자이너입니다.
         </p>
       </div>
       <div class="hero-btns-cell">
@@ -64,7 +57,6 @@
         SCROLL DOWN
       </div>
     </div>
-
   </section>
 
   <!-- ══════════════════════════════════
@@ -88,35 +80,33 @@
             신입 디자이너입니다.
           </p>
           <p>
-            대학에서 시각디자인을 전공하며 타이포그래피, 컬러 이론, UI/UX의 기초를
-            탄탄히 다졌고, 개인 프로젝트를 통해 실제 웹사이트를 직접 기획·디자인·제작하는
+            국비 지원 학원에서 UI/UX 반응형 웹디자인&웹퍼블리셔 과정을 수료하며 웹사이트 제작의 기초를
+            탄탄히 다졌고, <br>
+            개인 프로젝트를 통해 실제 웹사이트를 직접 기획·디자인·제작하는
             경험을 쌓았습니다.
           </p>
           <p>
             아름다운 것에 그치지 않고 <strong>논리적으로 설계된 레이아웃과 직관적인
             인터랙션</strong>이 좋은 웹을 만든다고 믿습니다.
           </p>
-
           <div class="about-tools-title">// 사용 툴</div>
           <div class="tools-grid">
             <div class="tool-item">Figma</div>
             <div class="tool-item">Photoshop</div>
             <div class="tool-item">Illustrator</div>
-            <div class="tool-item">After Effects</div>
             <div class="tool-item">HTML/CSS</div>
-            <div class="tool-item">Framer</div>
-            <div class="tool-item">Notion</div>
-            <div class="tool-item">Zeplin</div>
+            <div class="tool-item">JS</div>
+            <div class="tool-item">VS code</div>
+            <div class="tool-item">Github</div>
           </div>
         </div>
 
         <div class="reveal d2">
           <ul class="about-keyword-list">
-            <li>Visual Design   <span class="sub">시각 디자인</span></li>
-            <li>UX Research     <span class="sub">사용자 리서치</span></li>
-            <li>Prototyping     <span class="sub">프로토타이핑</span></li>
-            <li>Typography      <span class="sub">타이포그래피</span></li>
-            <li>Motion          <span class="sub">모션 디자인</span></li>
+            <li>Trend Research  <span class="sub">트렌드 탐색</span></li>
+            <li>Creative Thinking     <span class="sub">창의적 사고</span></li>
+            <li>Detail Oriented    <span class="sub">디테일 중시</span></li>
+            <li>User Centered    <span class="sub">사용자 중심</span></li>
           </ul>
         </div>
       </div>
@@ -140,30 +130,22 @@
         <!-- Project 01 -->
         <div class="project-item reveal">
           <div class="project-screenshot">
-            <!--
-              실제 스크린샷 교체 방법:
-              <img src="images/project1.png" alt="Bloom 스크린샷">
-              으로 아래 div 전체를 교체하세요.
-            -->
-            <div class="screenshot-placeholder">
-              <div class="icon">🌿</div>
-              <div class="hint">홈페이지 스크린샷으로<br>교체하세요</div>
-            </div>
+            <a href="#n">
+              <img src="images/pj01.png" alt="프로젝트01">
+            </a>
           </div>
           <div class="project-info">
             <div class="y-corner"></div>
             <div class="project-num">PROJECT 01</div>
-            <div class="project-name">Bloom — 식물 쇼핑몰</div>
+            <div class="project-name">롯데건설</div>
             <div class="project-type">반응형 웹사이트</div>
             <p class="project-desc">
-              반려식물을 판매하는 온라인 쇼핑몰 웹사이트입니다. 자연스럽고 따뜻한
-              톤앤매너를 적용하고, 상품 탐색부터 구매까지의 사용자 흐름을
-              최적화하는 데 집중했습니다. 모바일 퍼스트 접근법으로 설계했습니다.
+              기존 롯데건설 홈페이지는 전체적인 디자인이 다소 노후된 느낌이 있어 브랜드 이미지를 효과적으로 전달하기 어려웠습니다. 이를 개선하기 위해 현대적인 UI와 정리된 레이아웃을 적용하여 기업 이미지를 보다 명확하게 전달할 수 있도록 리디자인을 진행해보았습니다.
             </p>
             <div class="project-tags">
               <span class="p-tag">UI Design</span>
               <span class="p-tag">반응형</span>
-              <span class="p-tag">Figma</span>
+              <span class="p-tag">개인작업</span>
             </div>
           </div>
         </div>
@@ -171,25 +153,23 @@
         <!-- Project 02 -->
         <div class="project-item reveal">
           <div class="project-screenshot">
-            <div class="screenshot-placeholder">
-              <div class="icon">💼</div>
-              <div class="hint">홈페이지 스크린샷으로<br>교체하세요</div>
-            </div>
+            <a href="#n">
+              <img src="images/pj02.png" alt="프로젝트02">
+            </a>
           </div>
           <div class="project-info">
             <div class="y-corner"></div>
             <div class="project-num">PROJECT 02</div>
-            <div class="project-name">Studio GRAY — 브랜드 사이트</div>
-            <div class="project-type">브랜드 웹사이트</div>
+            <div class="project-name">Dear Pet</div>
+            <div class="project-type">개편 웹사이트</div>
             <p class="project-desc">
-              소규모 인테리어 스튜디오의 브랜드 사이트입니다. 포트폴리오 갤러리와
-              프로세스 소개 페이지를 중심으로 구성했으며, 스크롤 인터랙션과
-              이미지 전환 애니메이션을 통해 공간감을 표현했습니다.
+              기존 홈페이지의 디자인과 정보 구조를 전반적으로 재정비하여 새로운 UI와 레이아웃으로 전면 개편한 프로젝트입니다.
+              사용자의 접근성과 가독성을 고려하여 콘텐츠 구조를 정리하고 보다 직관적인 웹 경험을 제공할 수 있도록 디자인했습니다.
             </p>
             <div class="project-tags">
-              <span class="p-tag">Brand Site</span>
-              <span class="p-tag">Motion</span>
-              <span class="p-tag">HTML/CSS</span>
+              <span class="p-tag">Redesign</span>
+              <span class="p-tag">반응형</span>
+              <span class="p-tag">개인작업</span>
             </div>
           </div>
         </div>
@@ -197,25 +177,22 @@
         <!-- Project 03 -->
         <div class="project-item reveal">
           <div class="project-screenshot">
-            <div class="screenshot-placeholder">
-              <div class="icon">📱</div>
-              <div class="hint">홈페이지 스크린샷으로<br>교체하세요</div>
-            </div>
+            <a href="#n">
+              <img src="images/pj03.PNG" alt="프로젝트03">
+            </a>
           </div>
           <div class="project-info">
             <div class="y-corner"></div>
             <div class="project-num">PROJECT 03</div>
-            <div class="project-name">Noti — 앱 랜딩페이지</div>
-            <div class="project-type">랜딩페이지</div>
+            <div class="project-name">Busan - MOCA</div>
+            <div class="project-type">개편 웹사이트</div>
             <p class="project-desc">
-              할 일 관리 앱의 출시 전 랜딩페이지입니다. 핵심 기능을 시각적으로
-              풀어내고 이메일 사전 등록 전환율을 높이기 위해 CTA 구성과 섹션 순서를
-              사용자 관점에서 설계했습니다.
+              기존 홈페이지는 정보 전달력이 다소 부족하여 콘텐츠를 직관적으로 파악하기 어려운 부분이 있었습니다. 이를 개선하기 위해 콘텐츠 구조와 레이아웃을 재정리하여 리뉴얼을 진행했습니다.
             </p>
             <div class="project-tags">
-              <span class="p-tag">Landing Page</span>
-              <span class="p-tag">Conversion</span>
-              <span class="p-tag">Framer</span>
+              <span class="p-tag">Redesign</span>
+              <span class="p-tag">반응형</span>
+              <span class="p-tag">개인작업</span>
             </div>
           </div>
         </div>
@@ -239,18 +216,12 @@
             </div>
           </div>
           <p class="contact-desc reveal">
-            인턴십, 신입 포지션, 프리랜서 협업 등<br>
+            인턴십, 신입 포지션<br>
             어떤 기회든 편하게 연락 주세요.
           </p>
-          <a href="mailto:hello@yujin.kr" class="contact-email-link reveal">
-            hello@yujin.kr →
+          <a href="mailto:suhyung0315@gmail.com" class="contact-email-link reveal">
+            suhyung0315@gmail.com →
           </a>
-          <div class="social-row reveal d1">
-            <a href="#" class="soc">be</a>
-            <a href="#" class="soc">gh</a>
-            <a href="#" class="soc">ig</a>
-            <a href="#" class="soc">in</a>
-          </div>
         </div>
 
         <div class="contact-right reveal d2">
@@ -258,11 +229,11 @@
             <div class="cbox-label">// INFO</div>
             <div class="cbox-item">
               <div class="cbox-icon">📍</div>
-              <div class="cbox-text"><strong>위치</strong> — 서울, 대한민국</div>
+              <div class="cbox-text"><strong>위치</strong> — 청주</div>
             </div>
             <div class="cbox-item">
               <div class="cbox-icon">🎓</div>
-              <div class="cbox-text"><strong>학력</strong> — 시각디자인학과 졸업 (2024)</div>
+              <div class="cbox-text"><strong>이력</strong> — 이지디자인 컴퓨터학원 <br> 반응형웹디자인(UX/UI) 및 웹퍼블리셔 과정 수료</div>
             </div>
             <div class="cbox-item">
               <div class="cbox-icon">✦</div>
@@ -270,7 +241,7 @@
             </div>
             <div class="cbox-item">
               <div class="cbox-icon">💬</div>
-              <div class="cbox-text"><strong>언어</strong> — 한국어 (원어민) · 영어 (비즈니스)</div>
+              <div class="cbox-text"><strong>연락처</strong> — 010.3221.0315</div>
             </div>
           </div>
         </div>
@@ -283,10 +254,10 @@
        FOOTER
   ══════════════════════════════════ -->
   <footer>
-    <span><span class="yl">©</span> 2024 김유진</span>
-    <span>WEB DESIGNER · SEOUL</span>
+    <span><span class="yl">©</span> 2025 SuHyung Lee</span>
+    <span>WEB DESIGNE · WEB PUBLISHER</span>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

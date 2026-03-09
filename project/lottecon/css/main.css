@@ -1,0 +1,720 @@
+/***********************
+* 파일명 : main.css 
+* 작성자 : 이수형
+* 작성일 : 25-10-23
+* 설  명 : index파일 (메인페이지)에서만 호출하는 css
+          메인페이지 (index)의 스타일이 이 페이지에서 선언됨 (header/footer 제외)
+          default.css (태그의 초기화 - 브라우저가 주는 기본 스타일 삭제)
+          common.css (wrapper, blind 처럼 모든 페이지에서 반복되는 기본 스타일 
+          - 변수도 여기서 선언, 변수가 너무 많으면 variable이라는 파일을 분리도 함)
+          layout.css (문서의 구조에 영향을 끼치는 요소 - header/footer가 들어감)
+*********************/
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+@import url(layout.css);
+
+.visual {
+    position: relative; /* scroll 정렬의 기준 */
+}
+.visual .swiper {
+    height: 100dvh;
+    position: relative; /* photo 정렬의 기준 */
+}
+.visual .swiper::after {
+    content: "";
+    position: absolute;
+    right: -1px;
+    bottom: -1px;
+    width: 75px;
+    height: 251px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 25px 0 0 0;
+    z-index: 1;
+}
+.visual .swiper .swiper-slide {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.visual .swiper .swiper-slide::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 250px;
+    width: 50px;
+    height: 50px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50px;
+    background-image: url(../images/main/round50.svg);
+}
+.visual .swiper .swiper-slide::after {
+    content: "";
+    position: absolute;
+    right: 74px;
+    bottom: -1px;
+    width: 50px;
+    height: 50px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50px;
+    background-image: url(../images/main/round50.svg);
+}
+.visual .swiper .swiper-slide .photo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.visual .swiper .swiper-slide .photo::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 45%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), transparent);
+    z-index: 1;
+}
+.visual .swiper .swiper-slide .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.visual .swiper .swiper-slide .txt {
+    margin-bottom: clamp(19.6rem, 21.3vw ,31.1rem);
+    color: #fff;
+}
+.visual .swiper .swiper-slide .txt h3 {
+    font-size: clamp(4rem, 4.3vw, 6rem);
+    font-weight: 400;
+    line-height: 1.3;
+    position: relative;
+}
+.visual .swiper .swiper-slide .txt h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -22px;
+    border-bottom: 1px solid #fff;
+    width: clamp(17rem, 18vw , 25rem);
+}
+.visual .swiper .swiper-slide .txt p {
+    margin: 11px 0 0 clamp(14.1rem, 18.4vw, 26.7rem);
+}
+.visual .swiper .ctrl_btn {
+    position: absolute;
+    left: 50%;
+    bottom: 2vw;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0 1.5rem;
+    z-index: 1;
+    align-items: center;
+}
+.visual .swiper .ctrl_btn .btn_prev {
+    width: 18px;
+    height: 18px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 8 13' fill='%23ffffff' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.5 13L0 6.5L6.5 0L7.4556 0.9556L1.91103 6.5L7.4556 12.0444L6.5 13Z' /%3E%3C/svg%3E%0A");
+}
+.visual .swiper .ctrl_btn .paging {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.visual .paging .swiper-pagination-bullet {
+    width: auto; 
+    height: auto; 
+    background: transparent; 
+    margin: 0; 
+    opacity: 1; 
+    position: relative; 
+    cursor: pointer; 
+    border-radius: 50%;
+    display:flex; 
+    justify-content:center; 
+    align-items:center; /* 가운데 동그라미와 svg선을 가운데 정렬하기 위한 스타일 */
+}
+.visual .paging .swiper-pagination-bullet:after {
+    content:""; 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    width: 7px; 
+    height: 7px; 
+    border-radius: 50%; 
+    background-color: #fff; /* 가운데 동그라미 스타일 */
+}
+.visual .paging .swiper-pagination-bullet svg {
+    width:16px;
+    height:16px; 
+    overflow:visible; /* 원을 그리는 동그라미의 크기 */
+    transform:rotate(-90deg); /* 12시 방향에서 시작하기 위해서 회전 */
+}
+.visual .paging .swiper-pagination-bullet svg .circle {
+    fill: transparent; stroke-linecap: round;
+    stroke: #fff; stroke-width: 5; /* 동그라미를 그리는 선의 색상/두께 */
+    stroke-dasharray: 270; stroke-dashoffset: 270; /* 선 총 길이인데 너무 길면 애니메이션이 빨리 끝나고 짧으면 다 안그려짐 */
+}
+.visual .paging .swiper-pagination-bullet.swiper-pagination-bullet-active svg .circle {
+    animation: progress 4.8s ease 1 forwards; /* 애니메이션이름, 시간, 가속도, 1번실행, 마지막상태유지 */
+}
+@keyframes progress{
+    0% { stroke-dashoffset: 270 }
+    100% { stroke-dashoffset: 0 }
+}
+.visual .swiper .ctrl_btn .btn_pause {
+    width: 20px;
+    height: 20px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 10 11' fill='%23ffffff' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.55769 11V0H9.73077V11H6.55769ZM0 11V0H3.17308V11H0Z'/%3E%3C/svg%3E%0A");
+}
+.visual .swiper .ctrl_btn .btn_play {
+    display: none;
+    width: 20px;
+    height: 20px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 10 13' fill='%23ffffff' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.000397682 12.192L9.57715 6.096L0.000397682 0V12.192Z'/%3E%3C/svg%3E%0A");
+}
+.visual .swiper .ctrl_btn .btn_next {
+    width: 18px;
+    height: 18px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 8 13' fill='%23ffffff' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.5 13L0 6.5L6.5 0L7.4556 0.9556L1.91103 6.5L7.4556 12.0444L6.5 13Z' /%3E%3C/svg%3E%0A");
+    transform: rotate(180deg);
+}
+.visual .scroll {
+    position: absolute;
+    right: -20px;
+    bottom: 130px;
+    rotate: 90deg;
+    font-size: 1.5rem;
+    z-index: 1;
+    animation: scroll 6s linear infinite;
+}
+.visual .scroll::after{ 
+    content: "";
+    position: absolute;
+    right: -16px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 10 10' fill='%231c1c1c' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.27826e-07 0L5 3.57556L10 4.37114e-07V1.35889L5 4.93444L3.27826e-07 1.35889V0ZM3.27826e-07 4.35037L5 7.92593L10 4.35037V5.70945L5 9.28482L3.27826e-07 5.70945V4.35037Z'/%3E%3C/svg%3E ");
+    rotate: -90deg;
+}
+@keyframes scroll {
+    0% { bottom: 130px; }
+    50% { bottom: 115px; }
+    100% { bottom: 130px; }
+}
+
+.biz {
+    position: relative;
+    margin: clamp(7.1rem,  11.6vw, 17.1rem) 0 0 0;
+}
+.biz .tit strong {
+    color: var(--color-main);
+    line-height: 1.3;
+}
+.biz .tit h2 {
+    font-size: clamp(2.8rem, 3vw, 4rem);
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--color-title);
+}
+.biz .list {
+    margin: clamp(8.6rem, 7.6vw, 11rem) 0 0 0;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.biz .list ul {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+}
+.biz .list ul li {
+    width: 20%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.biz .list ul li:nth-child(1) {
+    background-image: url(../images/main/biz_01.jpg);
+    background-position: 0% center;
+}
+.biz .list ul li:nth-child(2) {
+    background-image: url(../images/main/biz_02.jpg);
+    background-position: 25% center; 
+}
+.biz .list ul li:nth-child(3) {
+    background-image: url(../images/main/biz_03.jpg);
+    background-position: 50% center; 
+}
+.biz .list ul li:nth-child(4) {
+    background-image: url(../images/main/biz_04.jpg);
+    background-position: 75% center; 
+}
+.biz .list ul li:nth-child(5) {
+    background-image: url(../images/main/biz_05.jpg);
+    background-position: 100% center; 
+}
+.biz .list ul li:nth-child(even) {
+    transform: translateY(-70px);
+}
+.biz .list ul li:nth-child(odd)::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background: #fff;
+}
+.biz .list ul li:nth-child(even)::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background: #fff;  
+}
+.biz .list ul li:nth-child(odd)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -70px;
+    width: 100%;
+    height: 70px;
+    background: #fff;
+}
+.biz .list ul li:nth-child(even)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -70px;
+    width: 100%;
+    height: 70px;
+    background: #fff;
+}
+.biz .list ul li a {
+    display: block;
+    font-size: clamp(2.4rem, 2.3vw, 3.2rem);
+    font-weight: 700;
+    color: #c4c4c4;
+    padding: 0 0 clamp(16px, 2.8vw, 40px) clamp(16px, 2.1vw, 30px);
+    padding-top: 215.4%;
+    position: relative;
+}
+.biz .list ul li:hover a {
+    color: #fff;
+}
+.biz .list ul li a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: #fff;
+}
+.biz .list ul li:first-child a::after,
+.biz .list ul li:last-child a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 69px;
+    width: clamp(30px, 3.6vw, 50px);
+    height: clamp(30px, 3.6vw, 50px);
+    background-image: url(../images/main/biz_first.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.biz .list ul li:last-child a::after {
+    top: auto;
+    left: auto;
+    right: 0;
+    bottom: -1px;
+    rotate: 180deg;
+}
+.biz .bgBox {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -70px;
+    width: 100%;
+    height: calc(100% + 70px);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #000;
+    /* background-image: url(../images/main/biz_01.jpg); */
+    background-size: cover;
+    z-index: -1;
+}
+.biz .bgBox::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: calc(100% + 70px);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-size: cover;
+}
+.biz .bgBox .bgLayer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+.biz .bgBox .bgLayer.active {
+    opacity: 1;
+}
+.biz .bgBox .bgLayer.item01 { 
+    background-image: url(../images/main/biz_01.jpg);
+}
+.biz .bgBox .bgLayer.item02 { 
+    background-image: url(../images/main/biz_02.jpg);
+}
+.biz .bgBox .bgLayer.item03 { 
+    background-image: url(../images/main/biz_03.jpg); 
+}
+.biz .bgBox .bgLayer.item04 { 
+    background-image: url(../images/main/biz_04.jpg); 
+}
+.biz .bgBox .bgLayer.item05 { 
+    background-image: url(../images/main/biz_05.jpg); 
+}
+.biz .bgBox .bgLayer.active {
+    opacity: 1; /* 보이면서 fade-in */
+}
+
+
+.tech {
+    position: relative;
+    margin: clamp(7.1rem,  11.6vw, 17.1rem) 0 0 0;  
+}
+.tech .tit strong {
+    color: var(--color-main);
+    line-height: 1.3;
+}
+.tech .tit h2 {
+    font-size: clamp(2.8rem, 3vw, 4rem);
+    font-weight: 700;
+    line-height: 1.3;
+}
+.tech .tab_list {
+    margin-top: clamp(40px, 6.7vw, 88px);
+    position: relative;
+}
+.tech .tab_list ul {
+    position: absolute;
+    right: 0;
+    top: -56px;
+    font-size: clamp(3rem, 5.4vw, 7rem);
+    line-height: 1.3;
+    text-align: right;
+    z-index: 1;
+    color: #c4c4c4;
+}
+.tech .tab_list ul li.active {
+    color: var(--color-title);
+}
+.tech .tab_content {
+    margin: 0 0 0 clamp(16px, 8.2vw, 107px);
+    position: relative;
+}
+.tech .tab_content .photo {
+    width: 100%;
+    max-width: 1046px;
+}
+.tech .tab_content .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: clamp(10px, 1.6vw, 20px);
+    vertical-align: top;
+}
+.tech .tab_content .txt {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: clamp(176px, 23vw, 297px);
+    height: clamp(41px, 5.4vw, 71px);
+    background-color: #fff;
+    border-radius: 0 10px 0 0;
+    display: flex;
+    align-items: center;
+}
+.tech .tab_content .txt::before,
+.tech .tab_content .txt::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -20px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(../images/main/round20.svg);
+    width: 20px;
+    height: 20px;
+}
+.tech .tab_content .txt::after {
+    left: auto;
+    top: auto;
+    right: -20px;
+    bottom: 0;
+}
+.tech .tab_content .txt span {
+    font-size: clamp(1.6rem, 1.9vw, 2.4rem);
+    margin-left: clamp(16px, 2.3vw, 30px);
+}
+.tech .tab_content .tab_item.item02,
+.tech .tab_content .tab_item.item03,
+.tech .tab_content .tab_item.item04 {
+    display: none;
+}
+.tech .tab_content .tab_item.active {
+    display: block;
+}
+
+
+.arc {
+    position: relative;
+    margin: clamp(7.1rem,  11.6vw, 17.1rem) 0 0 0;  
+}
+.arc strong {
+    color: var(--color-main);
+    line-height: 1.3;
+}
+.arc h2 {
+    font-size: clamp(2.8rem, 3vw, 4rem);
+    font-weight: 700;
+    line-height: 1.3;
+}
+.arc .contant {
+    display: flex;
+    gap: 0 2.4rem;
+    margin-top: clamp(1.6rem, 1.6vw, 3rem);
+    align-items: stretch;
+}
+.arc .contant .arc_left {
+    width: calc(50% - 24px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    border-radius: 20px;
+}
+.arc .contant .arc_left .youtube-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #000;
+}
+.arc .contant .arc_left .youtube-wrap .youtube-play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(227, 6, 19, 0.6);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.arc .contant .arc_left .youtube-wrap .youtube-play::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-40%, -50%);
+    border-style: solid;
+    border-width: 15px 0 15px 25px;
+    border-color: transparent transparent transparent #fff;
+}
+.arc .contant .arc_left .youtube-wrap img,
+.arc .contant .arc_left .youtube-wrap iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: top;
+}
+.arc .contant .arc_right .inner {
+    display: flex;
+    gap: 0 24px;
+}
+.arc .contant .arc_right .inner a {
+    display: block;
+}
+.arc .contant .arc_right .inner a .news {
+    background-color: #f4f4f4;
+   padding: clamp(1.6rem, 1.5vw, 3rem);
+    border-radius: 10px;
+    position: relative;
+}
+.arc .contant .arc_right .inner a .news::after {
+    position: absolute;
+    content: "";
+    right: 30px;
+    top: 38px;
+    width: 22px;
+    height: 7px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg height='7' viewBox='0 0 22 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 5.69824H19L14.1282 0.698242' stroke='%231C1C1C' stroke-width='2'/%3E%3C/svg%3E%0A");
+}
+.arc .contant .arc_right .inner a .news strong {
+    color: #1c1c1c;
+}
+.arc .contant .arc_right .inner a .news h3 {
+    font-size: clamp(1.9rem, 3vw, 3rem);
+    font-weight: 700;
+    line-height: 1.3;
+    margin: clamp(5rem, 3.3vw, 6.2rem) 0 clamp(0rem, 0.6vw, 1rem) 0;
+}
+.arc .contant .arc_right .inner a .support {
+    background-color: var(--color-main);
+    padding: clamp(1.6rem, 1.5vw, 3rem);
+    border-radius: 10px;
+    color: #fff;
+    position: relative;
+}
+.arc .contant .arc_right .inner a .support::after {
+    position: absolute;
+    content: "";
+    right: 30px;
+    top: 38px;
+    width: 22px;
+    height: 7px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg height='7' viewBox='0 0 22 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 5.69824H19L14.1282 0.698242' stroke='%23ffffff' stroke-width='2'/%3E%3C/svg%3E%0A");
+}
+.arc .contant .arc_right .inner a .support strong {
+    color: #fff;
+}
+.arc .contant .arc_right .inner a .support h3 {
+    font-size: clamp(1.9rem, 3vw, 3rem);
+    font-weight: 700;
+    line-height: 1.3;
+    margin: clamp(5rem, 3.3vw, 6.2rem) 0 clamp(0rem, 0.6vw, 1rem) 0;
+}
+.arc .contant .arc_right a {
+    display: block;
+}
+.arc .contant .arc_right .recruit {
+    margin-top: 24px;
+    padding: clamp(1.6rem, 1.5vw, 3rem) 0 clamp(1.6rem, 2.9vw, 5.6rem) clamp(1.6rem, 1.5vw, 3rem);
+    color: #fff;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/main/recruit_01.jpg);
+    border-radius: 10px;
+}
+.arc .contant .arc_right .recruit strong {
+    color: #fff;
+    position: relative;
+}
+.arc .contant .arc_right .recruit strong::after {
+    position: absolute;
+    content: "";
+    right: -65px;
+    top: 9px;
+    width: 22px;
+    height: 7px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg height='7' viewBox='0 0 22 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 5.69824H19L14.1282 0.698242' stroke='%23ffffff' stroke-width='2'/%3E%3C/svg%3E%0A");
+}
+.arc .contant .arc_right .recruit h3 {
+    font-size: clamp(1.9rem, 3vw, 3rem);
+    font-weight: 700;
+    line-height: 1.3;
+    margin: clamp(5rem, 3.3vw, 6.2rem) 0 clamp(0rem, 0.6vw, 1rem) 0;
+}
+
+@media screen and (max-width:1024px){
+    .arc .contant {
+        display: block;
+    }
+    .arc .contant .arc_left {
+        width: auto;
+    }
+    .arc .contant .arc_right {
+        margin-top: clamp(1.6rem, 2.6vw, 2.4rem);
+    }
+    .arc .contant .arc_right .inner {
+        display: flex;
+        gap: 0 16px;
+    }
+    .arc .contant .arc_right .inner a {
+        width: calc((100% - 16px) / 2);
+    }
+    .arc .contant .arc_right .inner a .news,
+    .arc .contant .arc_right .inner a .support {
+        height: 100%;
+    }
+    .arc .contant .arc_right .inner a .news::after {
+        right: 16px;
+        top: 26px;
+        width: 16px;
+        height: 5px;
+    }
+    .arc .contant .arc_right .inner a .news p {
+        display: none;
+    }
+    .arc .contant .arc_right .inner a .support::after {
+        right: 16px;
+        top: 26px;
+        width: 16px;
+        height: 5px;
+    }
+    .arc .contant .arc_right .inner a .support p {
+        display: none;
+    }
+    .arc .contant .arc_right .recruit strong::after {
+        right: -45px;
+    }
+    .arc .contant .arc_right .recruit p {
+        display: none;
+    }
+}

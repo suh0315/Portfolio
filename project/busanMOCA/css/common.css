@@ -1,0 +1,90 @@
+/* 모든페이지에서 중복되는 스타일 */
+:root {
+    --color-title : #333333;
+    --color-basic : #333333;
+    --color-main : #39AF34;
+    --header-h : 100px;
+    --wrapper-margin : 3%;
+    --wrapper-margin-m : -3%;
+    /* --wrapper-max-width: 1260px; */
+    /* --wrap-left: max(calc((100% - var(--wrapper-max-width)) / 2), 0); */
+    --wrap-left: calc((100% - 1260px) / 2);
+}
+@media screen and (max-width:1024px){
+    :root {
+        --header-h : 84px;
+    }
+}
+@media screen and (max-width:768px){
+    :root {
+        --header-h : 70px;
+        --wrapper-margin : 16px;
+        --wrapper-margin-m : -16px;
+    }
+}
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: "NanumSquareNeo", "Pretendard", sans-serif;
+    font-size: 1.7rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-basic);
+    word-break: keep-all; /* 단어별로 줄바꿈 */
+    word-wrap: break-word;
+    /* 단어가 너무 길었을때 강제줄바꿈 */
+}
+@media screen and (max-width:768px){
+    body {
+        font-size: 1.6rem;
+    }
+}
+#wrap {
+    position: relative; /* header 정렬의 기준 */
+    overflow: hidden;
+}
+/* html문서 구조상 글자를 써줘야 하는데
+   그 글자를 안보이게 하고 싶을때 blind 클래스를 주면 사라짐 */
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto; /* 가운데 정렬 */
+}
+/*
+    좌우여백 50px : 1260 + 50 + 50 = 1360
+    좌우여백 30px : 1260 + 30 + 30 = 1320
+    좌우여백 5% : 1260 + (1260*0.05=63) + (1260*0.05=63) = 1386
+    좌우여백 3% : 1260 + (1260*0.03=37.8) + (1260*0.03=37.8) = 1335.6
+*/
+@media screen and (max-width:1320px){
+    .wrapper {
+        width: auto;
+        margin: 0 var(--wrapper-margin);
+    }
+}
+
+.mo_only { /* 모바일에서만 보임 */
+   display: none;  
+}
+@media screen and (max-width:768px){
+    .mo_only { /* 모바일에서만 보임 */
+        display: block;  
+    }
+    .pc_only { /* pc버전에서만 보임 */
+        display: none;
+    }
+}
+
+/* ::selection {
+    background-color: var(--color-main);
+    color: #fff;
+} */

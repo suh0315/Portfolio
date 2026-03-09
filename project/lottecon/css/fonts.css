@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap');
+@font-face {
+    font-family: 'Suit';
+    src: url(../fonts/SUIT-Regular.woff2);
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Suit';
+    src: url(../fonts/SUIT-SemiBold.woff2);
+    font-weight: 700;
+    font-display: swap;
+}
